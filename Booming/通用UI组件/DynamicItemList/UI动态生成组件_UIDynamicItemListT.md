@@ -173,7 +173,7 @@
 
 **描述：**
 
-组件初始化完成后，可以使用此方法传入一个任意大小的数据集合（暂时就只支持` DynamicArray` 类型了，有需要后续可以优化成支持所有容器类），组件会生成对应数量的UI（[补充说明](https://boomingtech.feishu.cn/docx/TnQBdXh1cogyogx0hgXciJvAnsd#part-LskVdCjuco9CGIxTKFZckoqrnhd)），并且借助` init_func` 初始化每一个UI。
+组件初始化完成后，可以使用此方法传入一个任意大小的数据集合（暂时就只支持` DynamicArray` 类型了，有需要后续可以优化成支持所有容器类），组件会生成对应数量的UI（[补充说明](#tips)），并且借助` init_func` 初始化每一个UI。
 
 具体用法可见[示例](#example)。
 
