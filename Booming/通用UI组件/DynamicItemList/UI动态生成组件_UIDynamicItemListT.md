@@ -12,18 +12,18 @@
 
 | **名字**                                                     | **类型**                                                     | **描述**                                   |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------ |
-| [m_panel](https://boomingtech.feishu.cn/docx/TnQBdXh1cogyogx0hgXciJvAnsd#part-TRiudnRC4o5L0exvbLlcAahUnwh) | UIValue                                                      | 生成动态元素的父节点                       |
-| [m_arrangement_state](https://boomingtech.feishu.cn/docx/TnQBdXh1cogyogx0hgXciJvAnsd#part-FDcedHwK6oAHPWxmYEXcTWXLnuh) | [UIDynamicItemListArrangementState](https://boomingtech.feishu.cn/docx/TnQBdXh1cogyogx0hgXciJvAnsd#part-VWXQdzCeio3o0gxljOlcROiEnwh) | 元素的排列方式（纵向或横向）               |
-| [m_horizontal_diraction](https://boomingtech.feishu.cn/docx/TnQBdXh1cogyogx0hgXciJvAnsd#part-Z6Ovd1n7MoC8dsx3wZicaKS5nxb) | [UIDynamicItemListHorizontalDiraction](https://boomingtech.feishu.cn/docx/TnQBdXh1cogyogx0hgXciJvAnsd#part-NX2GdaNQgouxnxxJNcIch7KVnrh) | 水平排列方向                               |
-| [m_vertical_diraction](https://boomingtech.feishu.cn/docx/TnQBdXh1cogyogx0hgXciJvAnsd#part-MIYfdpwYdoZcFBx1r9wcuZtonwg) | [UIDynamicItemListVerticalDiraction](https://boomingtech.feishu.cn/docx/TnQBdXh1cogyogx0hgXciJvAnsd#part-SCZWdvXproZSZzxcaqGcg8aUnhb) | 垂直排列方向                               |
-| [m_item_stacking_mode](https://boomingtech.feishu.cn/docx/TnQBdXh1cogyogx0hgXciJvAnsd#part-TzYDdX7OkoOl5Mxw6zUcfE29nFh) | [UIDynamicItemListStackingMode](https://boomingtech.feishu.cn/docx/TnQBdXh1cogyogx0hgXciJvAnsd#part-D3yTdKgQboSJ7rxNoa3c3UWznag) | 主排列方向上的堆叠方式                     |
+| [m_panel](#m_panel)                                          | UIValue                                                      | 生成动态元素的父节点                       |
+| [m_arrangement_state](#m_arrangement_state)                  | [UIDynamicItemListArrangementState](#UIDynamicItemListArrangementState) | 元素的排列方式（纵向或横向）               |
+| [m_horizontal_diraction](#m_horizontal_diraction)            | [UIDynamicItemListHorizontalDiraction](#UIDynamicItemListHorizontalDiraction) | 水平排列方向                               |
+| [m_vertical_diraction](#m_vertical_diraction)                | [UIDynamicItemListVerticalDiraction](#UIDynamicItemListVerticalDiraction) | 垂直排列方向                               |
+| [m_item_stacking_mode](https://boomingtech.feishu.cn/docx/TnQBdXh1cogyogx0hgXciJvAnsd#part-TzYDdX7OkoOl5Mxw6zUcfE29nFh) | [UIDynamicItemListStackingMode](#UIDynamicItemListStackingMode) | 主排列方向上的堆叠方式                     |
 | m_column_limit                                               | int                                                          | 列数限制，超出自动换行（仅横向排列可用）   |
 | m_raw_limit                                                  | int                                                          | 行数限制，超出自动换行（仅纵向排列可用）   |
 | m_pending_x                                                  | int                                                          | 元素水平间隔                               |
 | m_pending_y                                                  | int                                                          | 元素垂直间隔                               |
 | m_item_name                                                  | string                                                       | 生成的元素名字（生成时会自动拼上序号后缀） |
 
-### m_panel
+### <span id = m_panel>m_panel</span>
 
 **类型：** `UIValue`
 
@@ -31,7 +31,7 @@
 
 生成动态元素的父节点，应当设置为flash中一个空的节点，否则可能在某些情况下影响排列的最终效果。
 
-### m_arrangement_state
+### <span id = m_arrangement_state>m_arrangement_state</span>
 
 **类型：** `UIDynamicItemListArrangementState`
 
@@ -39,7 +39,7 @@
 
 设置元素纵向或横向排列，默认值为`UIDynamicItemListArrangementState.horizontal`（横向排列）。
 
-### m_horizontal_diraction
+### <span id = m_horizontal_diraction>m_horizontal_diraction</span>
 
 **类型：** `UIDynamicItemListHorizontalDiraction`
 
@@ -69,7 +69,7 @@
 
 
 
-### m_vertical_diraction
+### <span id = m_vertical_diraction>m_vertical_diraction</span>
 
 **类型：** `UIDynamicItemListVerticalDiraction`
 
@@ -83,7 +83,7 @@
 
 
 
-### m_item_stacking_mode
+### <span id = m_item_stacking_mode>m_item_stacking_mode</span>
 
 **类型：** `UIDynamicItemListStackingMode`
 
@@ -131,7 +131,7 @@
 | [reset()](https://boomingtech.feishu.cn/docx/TnQBdXh1cogyogx0hgXciJvAnsd#part-KAHzdo6BpoZXj7xUfOkcvVGVnIh) | 重置组件                       |
 | [clear()](https://boomingtech.feishu.cn/docx/TnQBdXh1cogyogx0hgXciJvAnsd#part-XhEld1H0momZhaxud4Wcl8R7nNc) | 清理函数                       |
 
-### ctor(item_class_define, action_script_class_name)
+### <span id = ctor>ctor(item_class_define, action_script_class_name)</span>
 
 **参数：**
 
@@ -155,7 +155,7 @@ action_script_class_name` 类型：`string
 
 构造函数需要绑定生成的UI类型，并且可以用可选参数绑定或重绑定指定的flash组件的as类，可选参数只在Lua类本身没有绑定as类或需要重新指定as类型的情况才需要传入。
 
-### initListByInitFunctionAndDatas(init_func, data_array)
+### <span id = initListByInitFunctionAndDatas>initListByInitFunctionAndDatas(init_func, data_array)</span>
 
 **参数：**
 
@@ -179,7 +179,7 @@ data_array` 类型：`DynamicArray
 
 具体用法可见[示例](https://boomingtech.feishu.cn/docx/TnQBdXh1cogyogx0hgXciJvAnsd#part-Amf2djPaVovW8fx9U4vcsz8tnrb)。
 
-### arrangeUI()
+### <span id = arrangeUI>arrangeUI()</span>
 
 **参数：**无
 
@@ -189,7 +189,7 @@ data_array` 类型：`DynamicArray
 
 重新排列UI，在生成UI时会自动调用一次，仅在排版动态变化的情况下需要手动调用。
 
-### iteratorUsed()
+### <span id = iteratorUsed>iteratorUsed()</span>
 
 **参数：**无
 
@@ -203,7 +203,7 @@ data_array` 类型：`DynamicArray
 
 类似DynamicArray类的iterator方法，用`for..in..`语句使用。
 
-### iteratorAll()
+### <span id = iteratorAll>iteratorAll()</span>
 
 **参数：**无
 
@@ -217,7 +217,7 @@ data_array` 类型：`DynamicArray
 
 类似DynamicArray类的iterator方法，用`for..in..`语句使用。
 
-### reset()
+### <span id = reset>reset()</span>
 
 **参数：**无
 
@@ -227,7 +227,7 @@ data_array` 类型：`DynamicArray
 
 清空元素列表（不会销毁元素）。
 
-### clear()
+### <span id = clear>clear()</span>
 
 **参数：**无
 
@@ -239,7 +239,7 @@ data_array` 类型：`DynamicArray
 
 ## 枚举类型
 
-### UIDynamicItemListArrangementState
+### <span id = UIDynamicItemListArrangementState>UIDynamicItemListArrangementState</span>
 
 **定义：**
 
@@ -251,7 +251,7 @@ data_array` 类型：`DynamicArray
 
 `UIDynamicItemListArrangementState.vertical` 纵向排列
 
-### UIDynamicItemListHorizontalDiraction
+### <span id = UIDynamicItemListHorizontalDiraction>UIDynamicItemListHorizontalDiraction</span>
 
 **定义：**
 
@@ -265,7 +265,7 @@ data_array` 类型：`DynamicArray
 
 `UIDynamicItemListHorizontalDiraction.center` 居中排列
 
-### UIDynamicItemListVerticalDiraction
+### <span id = UIDynamicItemListVerticalDiraction>UIDynamicItemListVerticalDiraction</span>
 
 **定义：**
 
@@ -279,7 +279,7 @@ data_array` 类型：`DynamicArray
 
 `UIDynamicItemListVerticalDiraction.center` 居中排列
 
-### UIDynamicItemListStackingMode
+### <span id = UIDynamicItemListStackingMode>UIDynamicItemListStackingMode</span>
 
 **定义：**
 
