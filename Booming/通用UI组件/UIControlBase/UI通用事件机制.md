@@ -48,9 +48,9 @@ UI事件处理机制不完善，子控件的所有事件都发送到主页面的
 
 该机制在原来的UIControlBase的基础上进行扩展，新增了一些接口，兼容了已有功能的使用。
 
-基础功能文档：[UI管理系统](https://boomingtech.feishu.cn/wiki/wikcn5wjJIWscWq9B37NuiUIUed) 
+~~基础功能文档：[UI管理系统]()~~ 
 
-新增API文档：[UIControlBase鼠标事件](https://boomingtech.feishu.cn/docx/PDXsdIL4VoZxryxrOPdc7tZHnjb) 
+新增API文档：[UIControlBase鼠标事件](UIControlBase通用鼠标事件.md) 
 
 ## 使用方法简介
 
@@ -68,4 +68,4 @@ Lua中将控件类型声明为**UIControlBase**或其子类：
 
 ![img](https://cdn.jsdelivr.net/gh/StarryJam/PicDock@main/202404160107006.png)
 
-详细使用方法见文档 [UIControlBase通用鼠标事件](https://boomingtech.feishu.cn/docx/PDXsdIL4VoZxryxrOPdc7tZHnjb) 
+详细使用方法见文档 [UIControlBase通用鼠标事件](UIControlBase通用鼠标事件.md) 

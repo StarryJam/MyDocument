@@ -28,45 +28,39 @@
 
 <center>Lua中元件的类型声明</center>
 
-## 方法
+## 方法`
 
-| [UIControlBase:addUIEventListener(event_type, instance, call_back)](https://boomingtech.feishu.cn/docx/PDXsdIL4VoZxryxrOPdc7tZHnjb#part-Rcyud9bXmoMQK4xSUmlcsYRcnte) | 为控件注册鼠标事件                           |
+| [UIControlBase:addUIEventListener(event_type, instance, call_back)](#addUIEventListener) | 为控件注册鼠标事件                           |
 | ------------------------------------------------------------ | -------------------------------------------- |
-| [UIControlBase:removeUIEventListener(event_type, instance, call_back)](https://boomingtech.feishu.cn/docx/PDXsdIL4VoZxryxrOPdc7tZHnjb#part-PmQadHayPouYlNxOHNDcvQAdnmf) | 移除注册的鼠标事件                           |
-| [UIControlBase:reset()](https://boomingtech.feishu.cn/docx/PDXsdIL4VoZxryxrOPdc7tZHnjb#part-XiWQd1P5MobPsTx3rmaceiaPn8d) | 重置元件，会移除所有已注册的鼠标事件回调函数 |
+| [UIControlBase:removeUIEventListener(event_type, instance, call_back)](#removeUIEventListener) | 移除注册的鼠标事件                           |
+| [UIControlBase:reset()](#reset)                              | 重置元件，会移除所有已注册的鼠标事件回调函数 |
 
-<u>**以下为内部事件回调方法（一般情况下不要在外部调用，子类可以通过重写来改变行为）**</u>
+<span id = internal_callback><u>**以下为内部事件回调方法（一般情况下不要在外部调用，子类可以通过重写来改变行为）**</u></span>
 
-| [UIControlBase:onMouseOver(event_param)](https://boomingtech.feishu.cn/docx/PDXsdIL4VoZxryxrOPdc7tZHnjb#part-OgQGd8GJxovRrExTZnfctFLZnUd) | 元件自身鼠标移入回调         |
-| ------------------------------------------------------------ | ---------------------------- |
-| UIControlBase:onMouseOut(event_param)                        | 元件自身鼠标移出回调         |
-| UIControlBase:onMouseClick(event_param)                      | 元件自身鼠标点击回调         |
-| UIControlBase:onMouseDown(event_param)                       | 元件自身鼠标按下回调         |
-| UIControlBase:onMouseUp(event_param)                         | 元件自身鼠标抬起回调         |
-| UIControlBase:onMouseWheelDown(event_param)                  | 元件自身鼠标滚轮向下滚动回调 |
-| UIControlBase:onMouseWheelUp(event_param)                    | 元件自身鼠标滚轮向上滚动回调 |
+| [UIControlBase:onMouseOver(event_param)](#onMouseOver) | 元件自身鼠标移入回调         |
+| ------------------------------------------------------ | ---------------------------- |
+| UIControlBase:onMouseOut(event_param)                  | 元件自身鼠标移出回调         |
+| UIControlBase:onMouseClick(event_param)                | 元件自身鼠标点击回调         |
+| UIControlBase:onMouseDown(event_param)                 | 元件自身鼠标按下回调         |
+| UIControlBase:onMouseUp(event_param)                   | 元件自身鼠标抬起回调         |
+| UIControlBase:onMouseWheelDown(event_param)            | 元件自身鼠标滚轮向下滚动回调 |
+| UIControlBase:onMouseWheelUp(event_param)              | 元件自身鼠标滚轮向上滚动回调 |
 
-### UIControlBase:addUIEventListener(event_type, instance, call_back)
+### <span id = addUIEventListener>UIControlBase:addUIEventListener(event_type, instance, call_back)</span>
 
 **参数：**
 
-```
-event_type` 类型：`UIEventType
-```
+` event_type` 类型：`UIEventType` 
 
 事件类型
 
-```
-instance` 类型：`Object
-```
+`instance` 类型：`Object`
 
 回调方法所属的实例，即回调方法中的**self所指的对象**。
 
-```
-call_back_fun` 类型：`Function
-```
+`call_back_fun` 类型：`Function`
 
-事件的回调函数，函数会接受到两个参数{ui_instance, event_param}，前者为触发事件的UI对象，后者为事件的相关参数结构体，类型为`UIMouseEventParam`。
+事件的回调函数，函数会接受到两个参数{ui_instance, event_param}，前者为触发事件的UI对象，后者为事件的相关参数结构体，类型为[`UIMouseEventParam`](UIMouseEventParam_UI鼠标事件参数.md)。
 
 示例函数：
 
@@ -85,25 +79,21 @@ end
 
 为控件注册鼠标事件回调函数。
 
-### UIControlBase:removeUIEventListener(event_type, instance, call_back)
+
+
+### <span id = removeUIEventListener>UIControlBase:removeUIEventListener(event_type, instance, call_back)</span>
 
 **参数：**
 
-```
-event_type` 类型：`UIEventType
-```
+`event_type` 类型：`UIEventType`
 
 事件类型
 
-```
-instance` 类型：`Object
-```
+`instance` 类型：`Object`
 
 回调方法所属的实例，即回调方法中的**self所指的对象**。
 
-```
-call_back_fun` 类型：`Function
-```
+`call_back_fun` 类型：`Function`
 
 移除的事件回调函数。
 
@@ -113,7 +103,9 @@ call_back_fun` 类型：`Function
 
 用于移除已注册的指定的鼠标事件回调函数。
 
-### UIControlBase:reset()
+
+
+### <span id = reset>UIControlBase:reset()</span>
 
 **参数：**无
 
@@ -123,15 +115,15 @@ call_back_fun` 类型：`Function
 
 重置元件，会移除所有已注册的鼠标事件回调函数。**不会递归重置子元件**，以保证内部封装功能的完整性。
 
-### UIControlBase:onMouseOver(event_param)
 
-<u>**[【内部事件回调】](https://boomingtech.feishu.cn/docx/PDXsdIL4VoZxryxrOPdc7tZHnjb#part-ZgVbd8DBuoQ95qxrHyRcTGf8nkd)**</u>
+
+### <span id = onMouseOver>UIControlBase:onMouseOver(event_param)</span>
+
+<u>[【内部事件回调】](#internal_callback)</u>
 
 **参数：**
 
-```
-event_param` 类型：`UIMouseEventParam
-```
+`event_param` 类型：[`UIMouseEventParam`](UIMouseEventParam_UI鼠标事件参数.md)
 
 鼠标事件相关参数
 
@@ -139,7 +131,7 @@ event_param` 类型：`UIMouseEventParam
 
 **描述：**
 
-鼠标进入时触发的事件回调，常与onMouseOut方法配合用于显示tooltips。
+鼠标进入时触发的事件回调，常与`onMouseOut`方法配合用于显示tooltips。
 
 内部事件回调的触发会先于外部注册的事件回调。
 

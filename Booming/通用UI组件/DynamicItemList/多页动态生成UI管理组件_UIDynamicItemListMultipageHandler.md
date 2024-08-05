@@ -41,7 +41,7 @@ UI生成需要借助一个UI动态生成组件来实现，使用时需要先初�
 | [iteratorCurrentPage()]($iteratorCurrentPage)                | 当前页面元素迭代器             |
 | [clear()](#clear)                                            | 清理方法                       |
 
-### <span id = setInitFuncAndDataArray>setInitFuncAndDataArray(init_func, datas)
+### <span id = setInitFuncAndDataArray>setInitFuncAndDataArray(init_func, datas)</span>
 
 **参数：**
 
@@ -55,19 +55,21 @@ init_func` 类型：`function
 
 设置动态生成组件的初始化方法和数据集合。更新页面显示时组件会根据数据集合生成当前页面的UI，并且借助init_func初始化当前页面生成的UI。
 
+
+
 ### <span id = setPageIndex>setPageIndex(idx)</span>
 
 **参数：**
 
-```
-idx` 类型：`int
-```
+`idx` 类型：`int`
 
 **返回值：**无
 
 **描述：**
 
 翻页至目标页，会自动修正idx的值至**[1, 最大页数]**区间内。
+
+
 
 ### <span id = updatePage>updatePage()</span>
 
@@ -79,6 +81,8 @@ idx` 类型：`int
 
 刷新当前页显示，一般只在数据有更新时才需要调用。翻页时会自动刷新一次显示。
 
+
+
 ### <span id = nextPage>nextPage()</span>
 
 **参数：**无
@@ -89,6 +93,8 @@ idx` 类型：`int
 
 翻到下一页，在最后一页时不翻页。
 
+
+
 ### <span id = prePage>prePage()</span>
 
 **参数：**无
@@ -98,6 +104,8 @@ idx` 类型：`int
 **描述：**
 
 翻到上一页，在第一页时不翻页。
+
+
 
 ### <span id = getMaxPage>getMaxPage()</span>
 
@@ -110,6 +118,8 @@ idx` 类型：`int
 **描述：**
 
 获取最大页数。
+
+
 
 ### <span id = iteratorCurrentPage>iteratorCurrentPage()</span>
 
@@ -125,6 +135,8 @@ idx` 类型：`int
 
 类似DynamicArray类的iterator方法，用`for..in..`语句使用。
 
+
+
 ### <span id = e>clear()</span>
 
 **参数：**无
@@ -137,7 +149,7 @@ idx` 类型：`int
 
 ## 示例
 
-本示例重点在于展示`UIDynamicItemListMultipageHandler`的用法，其他相关组件和功能的使用方法请参考`DynamicItemList`和[UI通用鼠标事件](https://boomingtech.feishu.cn/docx/PDXsdIL4VoZxryxrOPdc7tZHnjb)的文档。
+本示例重点在于展示`UIDynamicItemListMultipageHandler`的用法，其他相关组件和功能的使用方法请参考[`UIDynamicItemList`](UI动态生成组件_UIDynamicItemListT.md)和[UI通用鼠标事件](../UIControlBase/UIControlBase通用鼠标事件.md)的文档。
 
 ```Lua
 -- 数据类
