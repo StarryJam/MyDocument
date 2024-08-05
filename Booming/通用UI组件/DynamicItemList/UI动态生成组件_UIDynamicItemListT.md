@@ -139,11 +139,11 @@
 
 **参数：**
 
-` item_class_define` 类型：`ClassDefinition` 
+`item_class_define` 类型：`ClassDefinition` 
 
 生成的UI类型
 
-` action_script_class_name` 类型：`string` 
+`action_script_class_name` 类型：`string` 
 
 【可选参数】用于绑定或重绑定flash中的as类型
 
@@ -161,11 +161,11 @@
 
 **参数：**
 
-` init_func` 类型：`function` 
+`init_func` 类型：`function` 
 
 生成函数，方法将接受一个集合中的数据和生成的UI实例，通过该方法使用数据将生成的UI初始化。
 
-` data_array` 类型：`DynamicArray` 
+`data_array` 类型：`DynamicArray` 
 
 数据集合
 
