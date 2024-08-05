@@ -6,7 +6,7 @@
 
 用于实现需要**翻页**展示的UI需求，通过持有一个`UIDynamicItemList`来切换显示当前页面的UI元素。
 
-<u>使用前建议先阅读`UIDynamicItemList`类的说明文档。</u>
+<u>使用前建议先阅读[` UIDynamicItemList` ](UI动态生成组件_UIDynamicItemListT.md)类的说明文档。</u>
 
 ![img](https://cdn.jsdelivr.net/gh/StarryJam/PicDock@main/202404160123897.png)
 
@@ -14,15 +14,15 @@
 
 ## 属性
 
-| **名字**                                                     | **类型**                                                     | **描述**                 |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------ |
-| [m_dynamic_item_list](https://boomingtech.feishu.cn/docx/W9AVdQTBIomvLixBw8JcM8rTnnd#part-K7asdygm5ogjaBx42fIcAeaqnFb) | [UIDynamicItemList](https://boomingtech.feishu.cn/docx/TnQBdXh1cogyogx0hgXciJvAnsd?from=from_copylink) | UI动态生成组件           |
-| m_page_capacity                                              | int                                                          | 每页的元素数量           |
-| m_cur_page_index                                             | int                                                          | 当前所在页数**（只读）** |
+| **名字**                                    | **类型**                                                  | **描述**                 |
+| ------------------------------------------- | --------------------------------------------------------- | ------------------------ |
+| [m_dynamic_item_list](#m_dynamic_item_list) | [UIDynamicItemList](UI动态生成组件_UIDynamicItemListT.md) | UI动态生成组件           |
+| m_page_capacity                             | int                                                       | 每页的元素数量           |
+| m_cur_page_index                            | int                                                       | 当前所在页数**（只读）** |
 
-### m_dynamic_item_list
+### <span id = m_dynamic_item_list>m_dynamic_item_list</span>
 
-**类型：**`UIDynamicItemList`
+**类型：**[`UIDynamicItemList`](UI动态生成组件_UIDynamicItemListT.md)
 
 **描述：**
 
@@ -32,16 +32,16 @@ UI生成需要借助一个UI动态生成组件来实现，使用时需要先初�
 
 | **方法名**                                                   | **描述**                       |
 | ------------------------------------------------------------ | ------------------------------ |
-| [setInitFuncAndDataArray(init_func, datas)](https://boomingtech.feishu.cn/docx/W9AVdQTBIomvLixBw8JcM8rTnnd#part-AcWvdBF0LoSlRBxIZ2acUSgenWb) | 设置子UI的初始化方法和数据集合 |
-| [setPageIndex(idx)](https://boomingtech.feishu.cn/docx/W9AVdQTBIomvLixBw8JcM8rTnnd#part-Fgk4d96KgoVrC6xxbLXcWYEHngg) | 翻页至目标页                   |
-| [updatePage()](https://boomingtech.feishu.cn/docx/W9AVdQTBIomvLixBw8JcM8rTnnd#part-A2U7dvSeOovUVVxEprYcYzTynld) | 刷新当前页                     |
-| [nextPage()](https://boomingtech.feishu.cn/docx/W9AVdQTBIomvLixBw8JcM8rTnnd#part-S1crdoNfqoZTRCxINj0cScjvnrf) | 翻到下一页                     |
-| [prePage()](https://boomingtech.feishu.cn/docx/W9AVdQTBIomvLixBw8JcM8rTnnd#part-QWCSdVQPJoAjCWxvFnCcA67hn5c) | 翻到上一页                     |
-| [getMaxPage()](https://boomingtech.feishu.cn/docx/W9AVdQTBIomvLixBw8JcM8rTnnd#part-WElUdnjE7ostsTxjWE6cACEhnKh) | 获取最大页数                   |
-| [iteratorCurrentPage()](https://boomingtech.feishu.cn/docx/W9AVdQTBIomvLixBw8JcM8rTnnd#part-BCI5dgFeTo3qtdxJsCJc1KE3nbh) | 当前页面元素迭代器             |
-| [clear()](https://boomingtech.feishu.cn/docx/W9AVdQTBIomvLixBw8JcM8rTnnd#part-DK6cdtTDyoxh61xUtv1cgfVQnZg) | 清理方法                       |
+| [setInitFuncAndDataArray(init_func, datas)](#setInitFuncAndDataArray) | 设置子UI的初始化方法和数据集合 |
+| [setPageIndex(idx)](#setPageIndex)                           | 翻页至目标页                   |
+| [updatePage()](#updatePage)                                  | 刷新当前页                     |
+| [nextPage()](#nextPage)                                      | 翻到下一页                     |
+| [prePage()](#prePage)                                        | 翻到上一页                     |
+| [getMaxPage()](#getMaxPage)                                  | 获取最大页数                   |
+| [iteratorCurrentPage()]($iteratorCurrentPage)                | 当前页面元素迭代器             |
+| [clear()](#clear)                                            | 清理方法                       |
 
-### setInitFuncAndDataArray(init_func, datas)
+### <span id = setInitFuncAndDataArray>setInitFuncAndDataArray(init_func, datas)
 
 **参数：**
 
@@ -55,7 +55,7 @@ init_func` 类型：`function
 
 设置动态生成组件的初始化方法和数据集合。更新页面显示时组件会根据数据集合生成当前页面的UI，并且借助init_func初始化当前页面生成的UI。
 
-### setPageIndex(idx)
+### <span id = setPageIndex>setPageIndex(idx)</span>
 
 **参数：**
 
@@ -69,7 +69,7 @@ idx` 类型：`int
 
 翻页至目标页，会自动修正idx的值至**[1, 最大页数]**区间内。
 
-### updatePage()
+### <span id = updatePage>updatePage()</span>
 
 **参数：**无
 
@@ -79,7 +79,7 @@ idx` 类型：`int
 
 刷新当前页显示，一般只在数据有更新时才需要调用。翻页时会自动刷新一次显示。
 
-### nextPage()
+### <span id = nextPage>nextPage()</span>
 
 **参数：**无
 
@@ -89,7 +89,7 @@ idx` 类型：`int
 
 翻到下一页，在最后一页时不翻页。
 
-### prePage()
+### <span id = prePage>prePage()</span>
 
 **参数：**无
 
@@ -99,7 +99,7 @@ idx` 类型：`int
 
 翻到上一页，在第一页时不翻页。
 
-### getMaxPage()
+### <span id = getMaxPage>getMaxPage()</span>
 
 **参数：**无
 
@@ -111,7 +111,7 @@ idx` 类型：`int
 
 获取最大页数。
 
-### iteratorCurrentPage()
+### <span id = iteratorCurrentPage>iteratorCurrentPage()</span>
 
 **参数：**无
 
@@ -125,7 +125,7 @@ idx` 类型：`int
 
 类似DynamicArray类的iterator方法，用`for..in..`语句使用。
 
-### clear()
+### <span id = e>clear()</span>
 
 **参数：**无
 
@@ -133,7 +133,7 @@ idx` 类型：`int
 
 **描述：**
 
-清理函数，清空设置，解除引用，**<u>并不会调用[m_dynamic_item_list](https://boomingtech.feishu.cn/docx/W9AVdQTBIomvLixBw8JcM8rTnnd#part-K7asdygm5ogjaBx42fIcAeaqnFb)的clear方法，需要手动清理</u>**。
+清理函数，清空设置，解除引用，**<u>并不会调用[m_dynamic_item_list](#m_dynamic_item_list)的clear方法，需要手动清理</u>**。
 
 ## 示例
 

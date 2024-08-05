@@ -10,18 +10,18 @@
 
 ## 属性
 
-| **名字**                                                     | **类型**                                                     | **描述**                                   |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------ |
-| [m_panel](#m_panel)                                          | UIValue                                                      | 生成动态元素的父节点                       |
-| [m_arrangement_state](#m_arrangement_state)                  | [UIDynamicItemListArrangementState](#UIDynamicItemListArrangementState) | 元素的排列方式（纵向或横向）               |
-| [m_horizontal_diraction](#m_horizontal_diraction)            | [UIDynamicItemListHorizontalDiraction](#UIDynamicItemListHorizontalDiraction) | 水平排列方向                               |
-| [m_vertical_diraction](#m_vertical_diraction)                | [UIDynamicItemListVerticalDiraction](#UIDynamicItemListVerticalDiraction) | 垂直排列方向                               |
-| [m_item_stacking_mode](https://boomingtech.feishu.cn/docx/TnQBdXh1cogyogx0hgXciJvAnsd#part-TzYDdX7OkoOl5Mxw6zUcfE29nFh) | [UIDynamicItemListStackingMode](#UIDynamicItemListStackingMode) | 主排列方向上的堆叠方式                     |
-| m_column_limit                                               | int                                                          | 列数限制，超出自动换行（仅横向排列可用）   |
-| m_raw_limit                                                  | int                                                          | 行数限制，超出自动换行（仅纵向排列可用）   |
-| m_pending_x                                                  | int                                                          | 元素水平间隔                               |
-| m_pending_y                                                  | int                                                          | 元素垂直间隔                               |
-| m_item_name                                                  | string                                                       | 生成的元素名字（生成时会自动拼上序号后缀） |
+| **名字**                                          | **类型**                                                     | **描述**                                   |
+| ------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------ |
+| [m_panel](#m_panel)                               | UIValue                                                      | 生成动态元素的父节点                       |
+| [m_arrangement_state](#m_arrangement_state)       | [UIDynamicItemListArrangementState](#UIDynamicItemListArrangementState) | 元素的排列方式（纵向或横向）               |
+| [m_horizontal_diraction](#m_horizontal_diraction) | [UIDynamicItemListHorizontalDiraction](#UIDynamicItemListHorizontalDiraction) | 水平排列方向                               |
+| [m_vertical_diraction](#m_vertical_diraction)     | [UIDynamicItemListVerticalDiraction](#UIDynamicItemListVerticalDiraction) | 垂直排列方向                               |
+| [m_item_stacking_mode](#m_item_stacking_mode)     | [UIDynamicItemListStackingMode](#UIDynamicItemListStackingMode) | 主排列方向上的堆叠方式                     |
+| m_column_limit                                    | int                                                          | 列数限制，超出自动换行（仅横向排列可用）   |
+| m_raw_limit                                       | int                                                          | 行数限制，超出自动换行（仅纵向排列可用）   |
+| m_pending_x                                       | int                                                          | 元素水平间隔                               |
+| m_pending_y                                       | int                                                          | 元素垂直间隔                               |
+| m_item_name                                       | string                                                       | 生成的元素名字（生成时会自动拼上序号后缀） |
 
 ### <span id = m_panel>m_panel</span>
 
@@ -31,6 +31,8 @@
 
 生成动态元素的父节点，应当设置为flash中一个空的节点，否则可能在某些情况下影响排列的最终效果。
 
+
+
 ### <span id = m_arrangement_state>m_arrangement_state</span>
 
 **类型：** `UIDynamicItemListArrangementState`
@@ -38,6 +40,8 @@
 **描述：**
 
 设置元素纵向或横向排列，默认值为`UIDynamicItemListArrangementState.horizontal`（横向排列）。
+
+
 
 ### <span id = m_horizontal_diraction>m_horizontal_diraction</span>
 
@@ -77,7 +81,7 @@
 
 元素水平排列方向的方向，**默认值**为`UIDynamicItemListHorizontalDiraction.down` （自上而下）。
 
-和[m_horizontal_diraction](https://boomingtech.feishu.cn/docx/TnQBdXh1cogyogx0hgXciJvAnsd#part-KR0Nd54MioUEjWxzd4mcgLV4nnb)是对称的。
+和[m_horizontal_diraction](#m_horizontal_diraction)是对称的。
 
 
 
@@ -123,27 +127,23 @@
 
 | **方法名**                                                   | **描述**                       |
 | ------------------------------------------------------------ | ------------------------------ |
-| [ctor(item_class_define, action_script_class_name)](https://boomingtech.feishu.cn/docx/TnQBdXh1cogyogx0hgXciJvAnsd#part-Q6mEdbrZBoZHQzx9kdVchwl1nKf) | 构造函数                       |
-| [initListByInitFunctionAndDatas(init_func, data_array)](https://boomingtech.feishu.cn/docx/TnQBdXh1cogyogx0hgXciJvAnsd#part-F0jxdZ5TcoU7zHxFsPIctgVFnOg) | 根据生成函数和数据生成若干元素 |
-| [arrangeUI()](https://boomingtech.feishu.cn/docx/TnQBdXh1cogyogx0hgXciJvAnsd#part-PHoadGS0GoX3umxKAybcHa0hnwb) | 重新排列UI                     |
-| [iteratorUsed()](https://boomingtech.feishu.cn/docx/TnQBdXh1cogyogx0hgXciJvAnsd#part-CQnOdETeloeyyox7DMFcrtJdnBd) | 正在使用的UI迭代器             |
-| [iteratorAll()](https://boomingtech.feishu.cn/docx/TnQBdXh1cogyogx0hgXciJvAnsd#part-HuP1dyERBoumNDxpDiKcyHxanSl) | 所有UI元素的迭代器             |
-| [reset()](https://boomingtech.feishu.cn/docx/TnQBdXh1cogyogx0hgXciJvAnsd#part-KAHzdo6BpoZXj7xUfOkcvVGVnIh) | 重置组件                       |
-| [clear()](https://boomingtech.feishu.cn/docx/TnQBdXh1cogyogx0hgXciJvAnsd#part-XhEld1H0momZhaxud4Wcl8R7nNc) | 清理函数                       |
+| [ctor(item_class_define, action_script_class_name)](#ctor)   | 构造函数                       |
+| [initListByInitFunctionAndDatas(init_func, data_array)](#initListByInitFunctionAndDatas) | 根据生成函数和数据生成若干元素 |
+| [arrangeUI()](#arrangeUI)                                    | 重新排列UI                     |
+| [iteratorUsed()](#iteratorUsed)                              | 正在使用的UI迭代器             |
+| [iteratorAll()](#iteratorAll)                                | 所有UI元素的迭代器             |
+| [reset()](#reset)                                            | 重置组件                       |
+| [clear()](#clear)                                            | 清理函数                       |
 
 ### <span id = ctor>ctor(item_class_define, action_script_class_name)</span>
 
 **参数：**
 
-```
-item_class_define` 类型：`ClassDefinition
-```
+` item_class_define` 类型：`ClassDefinition` 
 
 生成的UI类型
 
-```
-action_script_class_name` 类型：`string
-```
+` action_script_class_name` 类型：`string` 
 
 【可选参数】用于绑定或重绑定flash中的as类型
 
@@ -155,19 +155,17 @@ action_script_class_name` 类型：`string
 
 构造函数需要绑定生成的UI类型，并且可以用可选参数绑定或重绑定指定的flash组件的as类，可选参数只在Lua类本身没有绑定as类或需要重新指定as类型的情况才需要传入。
 
+
+
 ### <span id = initListByInitFunctionAndDatas>initListByInitFunctionAndDatas(init_func, data_array)</span>
 
 **参数：**
 
-```
-init_func` 类型：`function
-```
+` init_func` 类型：`function` 
 
 生成函数，方法将接受一个集合中的数据和生成的UI实例，通过该方法使用数据将生成的UI初始化。
 
-```
-data_array` 类型：`DynamicArray
-```
+` data_array` 类型：`DynamicArray` 
 
 数据集合
 
@@ -175,9 +173,11 @@ data_array` 类型：`DynamicArray
 
 **描述：**
 
-组件初始化完成后，可以使用此方法传入一个任意大小的数据集合（暂时就只支持DynamicArray类型了，有需要后续可以优化成支持所有容器类），组件会生成对应数量的UI（[补充说明](https://boomingtech.feishu.cn/docx/TnQBdXh1cogyogx0hgXciJvAnsd#part-LskVdCjuco9CGIxTKFZckoqrnhd)），并且借助init_func初始化每一个UI。
+组件初始化完成后，可以使用此方法传入一个任意大小的数据集合（暂时就只支持` DynamicArray` 类型了，有需要后续可以优化成支持所有容器类），组件会生成对应数量的UI（[补充说明](https://boomingtech.feishu.cn/docx/TnQBdXh1cogyogx0hgXciJvAnsd#part-LskVdCjuco9CGIxTKFZckoqrnhd)），并且借助` init_func` 初始化每一个UI。
 
-具体用法可见[示例](https://boomingtech.feishu.cn/docx/TnQBdXh1cogyogx0hgXciJvAnsd#part-Amf2djPaVovW8fx9U4vcsz8tnrb)。
+具体用法可见[示例](#example)。
+
+
 
 ### <span id = arrangeUI>arrangeUI()</span>
 
@@ -188,6 +188,8 @@ data_array` 类型：`DynamicArray
 **描述：**
 
 重新排列UI，在生成UI时会自动调用一次，仅在排版动态变化的情况下需要手动调用。
+
+
 
 ### <span id = iteratorUsed>iteratorUsed()</span>
 
@@ -201,7 +203,9 @@ data_array` 类型：`DynamicArray
 
 遍历正在被使用的元素的迭代器。
 
-类似DynamicArray类的iterator方法，用`for..in..`语句使用。
+类似` DynamicArray` 类的iterator方法，用`for..in..`语句使用。
+
+
 
 ### <span id = iteratorAll>iteratorAll()</span>
 
@@ -213,9 +217,11 @@ data_array` 类型：`DynamicArray
 
 **描述：**
 
-遍历正在所有元素的迭代器，包括对象池（见[补充说明](https://boomingtech.feishu.cn/docx/TnQBdXh1cogyogx0hgXciJvAnsd#part-DRmzdw2ulo88bkxunNXccnSFnpZ)）中的元素，一般情况下不会使用到这个方法。
+遍历正在所有元素的迭代器，包括对象池（见[补充说明](#tips)）中的元素，一般情况下不会使用到这个方法。
 
-类似DynamicArray类的iterator方法，用`for..in..`语句使用。
+类似` DynamicArray` 类的iterator方法，用`for..in..`语句使用。
+
+
 
 ### <span id = reset>reset()</span>
 
@@ -226,6 +232,8 @@ data_array` 类型：`DynamicArray
 **描述：**
 
 清空元素列表（不会销毁元素）。
+
+
 
 ### <span id = clear>clear()</span>
 
@@ -251,6 +259,8 @@ data_array` 类型：`DynamicArray
 
 `UIDynamicItemListArrangementState.vertical` 纵向排列
 
+
+
 ### <span id = UIDynamicItemListHorizontalDiraction>UIDynamicItemListHorizontalDiraction</span>
 
 **定义：**
@@ -264,6 +274,8 @@ data_array` 类型：`DynamicArray
 `UIDynamicItemListHorizontalDiraction.right` 从左向右排列
 
 `UIDynamicItemListHorizontalDiraction.center` 居中排列
+
+
 
 ### <span id = UIDynamicItemListVerticalDiraction>UIDynamicItemListVerticalDiraction</span>
 
@@ -279,6 +291,8 @@ data_array` 类型：`DynamicArray
 
 `UIDynamicItemListVerticalDiraction.center` 居中排列
 
+
+
 ### <span id = UIDynamicItemListStackingMode>UIDynamicItemListStackingMode</span>
 
 **定义：**
@@ -287,19 +301,19 @@ data_array` 类型：`DynamicArray
 
 **值：**
 
-```
-UIDynamicItemListStackingMode.overlap
-```
+` UIDynamicItemListStackingMode.overlap` 
 
 不考虑元素的大小，下一个元素的位置为上一个元素的位置+pedding
 
-```
-UIDynamicItemListStackingMode.pushing
-```
+` UIDynamicItemListStackingMode.pushing` 
 
 考虑元素的大小，下一个元素的位置为上一个元素的位置+上一个元素的尺寸+pedding
 
-## 示例
+
+
+
+
+## <span id = example>示例</span>
 
 ```Lua
 -- 数据类
@@ -390,9 +404,9 @@ end
 
 
 
-## 补充说明
+## <span id = tips>补充说明</span>
 
-- 该类中的横纵轴相关属性含义以及实现方式是完全**对称**的，详情可见源码中 UIDynamicItemList:arrangeUI() 方法。
+- 该类中的横纵轴相关属性含义以及实现方式是完全**对称**的，详情可见源码中 ` UIDynamicItemList:arrangeUI()`  方法。
 - 动态生成的UI会以类似**对象池**的方式被保留，若下次生成的数量小于或等于已有的UI数，不会再生成新的UI，而只是用新的数据初始化UI，多余的UI将被隐藏，因此重复动态生成UI的开销并不大。
-- 注意和flash**滚动列表元件scroll_item_list**的互动可能会引发的问题，因为scroll_item_list初始化时会将目标panel的位置设置到(0, 0)点位置
-- 关于**老UI的适配**问题：动态生成UI需要调用UI的**initializeFromParent**方法，由于老UI的生命周期管理并不统一，可能会出现没有对应方法或者参数不一致的问题，如果在老UI上使用此组件可能需要对应做一定的改动。
+- 注意和flash**滚动列表元件` scroll_item_list` **的互动可能会引发的问题，因为` scroll_item_list` 初始化时会将目标panel的位置设置到(0, 0)点位置
+- 关于**老UI的适配**问题：动态生成UI需要调用UI的**` initializeFromParent` **方法，由于老UI的生命周期管理并不统一，可能会出现没有对应方法或者参数不一致的问题，如果在老UI上使用此组件可能需要对应做一定的改动。
